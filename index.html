@@ -5,25 +5,41 @@
   <title>Halaman Utama</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
-    /* Video sebagai background */
-    #background-video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Anton', sans-serif;
     }
 
-    body {
-      background-color: #000;
+    /* Background video full screen */
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Konten tengah rasio 9:16 */
+    .wrapper {
+      width: 100%;
+      max-width: 540px; /* Sesuai rasio 9:16 (1080x1920) */
+      aspect-ratio: 9 / 16;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: #fff;
-      font-family: 'Anton', sans-serif;
       text-align: center;
-      padding: 60px 20px;
-      overflow: hidden;
-      margin: 0;
+      padding: 20px;
+      z-index: 1;
+      position: relative;
     }
 
     h1 {
@@ -49,46 +65,35 @@
       display: none;
     }
   </style>
-  
 </head>
 <body>
 
-  <!-- Background Video -->
-  <video autoplay muted loop id="background-video">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline id="background-video">
     <source src="background.mp4" type="video/mp4">
     Browser Anda tidak mendukung tag video.
   </video>
 
-  <h1>Stecu Stecu?</h1>
-  <div class="lirik">
-    <p style="animation-delay: 1s;">1.. 2,2.. 1,2,3..</p>
-    <p style="animation-delay: 4s;">aduh abang bukan maksudku begitu..</p>
-    <p style="animation-delay: 7s;">masalah stecu bukan berarti tak mau..</p>
-    <p style="animation-delay: 11s;">jual mahal dikit kan bisa</p>
-    <p style="animation-delay: 13s;">coba kasih effortnya saja</p>
-    <p style="animation-delay: 15s;">kalau memang cocok bisa datang ke rumah</p>
-    <p style="animation-delay: 17s;">stecu-stecu setelan cuek baru malu</p>
-    <p style="animation-delay: 21s;">aduh adek ini mau juga abang yang rayu</p>
-    <p style="animation-delay: 24s;">stecu-stecu setelan cuek baru malu</p>
-    <p style="animation-delay: 27s;">aduh adek ini mau juga abang yang madu</p>
+  <div class="wrapper">
+    <h1>Stecu Stecu?</h1>
+    <div class="lirik">
+      <p style="animation-delay: 1s;">1.. 2,2.. 1,2,3..</p>
+      <p style="animation-delay: 4s;">aduh abang bukan maksudku begitu..</p>
+      <p style="animation-delay: 7s;">masalah stecu bukan berarti tak mau..</p>
+      <p style="animation-delay: 11s;">jual mahal dikit kan bisa</p>
+      <p style="animation-delay: 13s;">coba kasih effortnya saja</p>
+      <p style="animation-delay: 15s;">kalau memang cocok bisa datang ke rumah</p>
+      <p style="animation-delay: 17s;">stecu-stecu setelan cuek baru malu</p>
+      <p style="animation-delay: 21s;">aduh adek ini mau juga abang yang rayu</p>
+      <p style="animation-delay: 24s;">stecu-stecu setelan cuek baru malu</p>
+      <p style="animation-delay: 27s;">aduh adek ini mau juga abang yang madu</p>
+    </div>
+
+    <audio autoplay loop>
+      <source src="stecu-stecu.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
   </div>
-<!-- GIF pojok kiri atas -->
-<img src="gif1.gif" class="gif pojok-kiri-atas">
-
-<!-- GIF pojok kanan atas -->
-<img src="gif2.gif" class="gif pojok-kanan-atas">
-
-<!-- GIF pojok kiri bawah -->
-<img src="gif3.gif" class="gif pojok-kiri-bawah">
-
-<!-- GIF pojok kanan bawah -->
-<img src="gif4.gif" class="gif pojok-kanan-bawah">
-
-
-  <audio autoplay loop>
-    <source src="stecu-stecu.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
-  </audio>
 
 </body>
 </html>
