@@ -1,0 +1,25 @@
+.gif {
+  width: 100px; /* ukuran bisa kamu atur sesuai selera */
+  position: fixed;
+  z-index: 999;
+}
+
+.pojok-kiri-atas {
+  top: 0;
+  left: 0;
+}
+
+.pojok-kanan-atas {
+  top: 0;
+  right: 0;
+}
+
+.pojok-kiri-bawah {
+  bottom: 0;
+  left: 0;
+}
+
+.pojok-kanan-bawah {
+  bottom: 0;
+  right: 0;
+}
